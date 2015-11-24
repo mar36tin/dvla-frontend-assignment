@@ -1,0 +1,6 @@
+vehicleReg = Registration number
+make = Vehicle make
+v5c = V5C document reference number (optional)
+error.vehicleReg_empty = Please enter your registration number
+error.make_empty = You must select your vehicle make from the list
+error.vehicleReg_invalid = You must enter your registration number in a valid format
