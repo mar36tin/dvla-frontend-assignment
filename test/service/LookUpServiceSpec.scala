@@ -1,10 +1,7 @@
 package service
 
+import org.scalatest.FunSpec
 import org.scalatest.matchers.ShouldMatchers
-import org.scalatest.{FunSpec, GivenWhenThen}
-import org.scalatest.{GivenWhenThen, FunSpec}
-import play.api.mvc.{AnyContent, Action}
-import models.VehicleDetails
 
 
 class LookUpServiceSpec extends FunSpec with ShouldMatchers {
