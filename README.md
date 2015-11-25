@@ -10,7 +10,7 @@ vehicle are mandatory.
 
 To run the DVLA checking car system, 
 
-1. clone the repository to your local disk. 
+1. clone the repository to your local disk: git clone https://github.com/mar36tin/dvla-frontend-assignment.git
 
 2. change directory to the root of the project: cd to/the/root/of/the/project
   
