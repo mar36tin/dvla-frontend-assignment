@@ -1,6 +1,5 @@
 @(vehicleDetailsForm: Form[VehicleDetails])(implicit messages: Messages)
 
-@import views.html.helpers._
 @import helper._
 
 @main("Get vehicle information from DVLA - GOV.UK") {
@@ -71,26 +70,9 @@
 									<p>You’ll need the vehicle’s make and registration number.</p>
 
                                     @form(action = routes.VehicleController.retrieveVehicle()) {
-                                    @dvlaInput(vehicleDetailsForm("vehicleReg"),
-                                    '_label -> Messages("vehicleReg"),
-                                    '_id -> "vehicleReg",
-                                    '_maxLength -> 7,
-                                    '_showConstraints -> false
-                                    )
-
-                                    @dvlaInput(vehicleDetailsForm("make"),
-                                    '_label -> Messages("make"),
-                                    '_id -> "make",
-                                    '_maxLength -> 40,
-                                    '_showConstraints -> false
-                                    )
-
-                                    @dvlaInput(vehicleDetailsForm("v5c"),
-                                    '_label -> Messages("v5c"),
-                                    '_id -> "v5c",
-                                    '_maxLength -> 12,
-                                    '_showConstraints -> false
-                                    )
+									@helper.inputText(vehicleDetailsForm("vehicleReg"))
+									@helper.inputText(vehicleDetailsForm("make"))
+									@helper.inputText(vehicleDetailsForm("v5c"))
 
                                     <div class="buttons">
                                         <input type="submit" class="button" role="button" value="Search vehicle"/>

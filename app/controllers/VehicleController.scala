@@ -51,6 +51,10 @@ class VehicleController @Inject()( val messagesApi: MessagesApi)
     Ok(views.html.index(vehicleDetailsForm))
   }
 
+  def test = Action { implicit request =>
+    Ok(views.html.search_page(vehicleDetailsForm))
+  }
+
   def retrieveVehicle = Action.async { implicit request =>
     vehicleDetailsForm.bindFromRequest.fold(
       formWithErrors => {

@@ -1,27 +1,26 @@
 package service
 
-import org.scalatest.FunSpec
-import org.scalatest.matchers.ShouldMatchers
+import org.scalatest.concurrent.ScalaFutures
+import org.scalatestplus.play.{OneServerPerSuite, PlaySpec}
 
 
-class LookUpServiceSpec extends FunSpec with ShouldMatchers {
+class LookUpServiceSpec extends PlaySpec with OneServerPerSuite with ScalaFutures {
 
   object TestLookUpService extends LookUpService
 
-  describe("LookUpService") {
-    it ("verifies if a vehicle is registered and returns the right vehicle details") {
+  "LookUpService" should {
+    "verifies if a vehicle is registered and returns the right vehicle details" in {
       val regVehicle = TestLookUpService.lookUp("SF11THG").get
-      regVehicle should have('vehicleReg ("SF11THG"), 'make ("Nissan"), 'v5c ("123456789602"))
+      regVehicle.vehicleReg must be ("SF11THG")
+      regVehicle.make must be ("Nissan")
+      regVehicle.v5c must be ("123456789602")
     }
+  }
 
-    it ("returns no result if the vehicle cannot be found") {
+  "LookUpService" should {
+    "returns no result if the vehicle cannot be found" in {
       val regVehicle = TestLookUpService.lookUp("SF09THG")
-      regVehicle should be (None)
-    }
-
-    it ("returns no result if the vehicle cannot be found") {
-      val regVehicle = TestLookUpService.lookUp("SF09THG")
-      regVehicle should be (None)
+      regVehicle must be(None)
     }
   }
 }

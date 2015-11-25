@@ -14,9 +14,12 @@ resolvers += "Codehaus stable repository" at "http://repository.codehaus.org/"
 resolvers += "Scalaz Bintray Repo" at "https://dl.bintray.com/scalaz/releases"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.4" % "test" withSources() withJavadoc()
+libraryDependencies += "org.scalatestplus" %% "play" % "1.4.0-M3" % "test" withSources() withJavadoc()
 libraryDependencies += "org.jsoup" % "jsoup" % "1.7.2"
 libraryDependencies += "org.mockito" % "mockito-all" % "1.9.5"
 libraryDependencies += "org.seleniumhq.selenium" % "selenium-java" % "2.35.0" % "test"
+
+
 
 routesGenerator := InjectedRoutesGenerator
 
