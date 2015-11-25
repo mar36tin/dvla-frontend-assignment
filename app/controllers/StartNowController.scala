@@ -7,6 +7,4 @@ class StartNowController extends Controller {
   def start = Action { implicit request =>
     Ok(views.html.startnow())
   }
-
-
 }

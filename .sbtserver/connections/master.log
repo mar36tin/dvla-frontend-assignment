@@ -1,19 +1,34 @@
-New log file opened at Wed Nov 25 06:44:46 GMT 2015 by 22642@Martins-MBP.lan
-Taking next connection to: 56682
-New client attempting to connect on port: 56683-56682
-  Address = /192.168.1.65:56682
-This client on port 56683 has uuid 228e3c04-3b7e-40d7-9a41-35c61b6fa3d9 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-228e3c04-3b7e-40d7-9a41-35c61b6fa3d9
-Taking next connection to: 56682
+New log file opened at Wed Nov 25 09:37:19 GMT 2015 by 9604@MW77S9GATZQ88N
+Taking next connection to: 57762
+New client attempting to connect on port: 57763-57762
+  Address = /172.17.2.14:57762
+This client on port 57763 has uuid c6b623d6-eba2-4971-9476-78df29c36db1 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-c6b623d6-eba2-4971-9476-78df29c36db1
+Taking next connection to: 57762
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 56682
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 56682
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 56682
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 56682
+Taking next connection to: 57762
+New client attempting to connect on port: 57847-57762
+  Address = /172.17.2.14:57762
+Handshake exception on socket: 57847
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 57762
+New client attempting to connect on port: 57848-57762
+  Address = /172.17.2.14:57762
+This client on port 57848 has uuid 1cc493db-d60e-415d-befd-8d46dd2450f6 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-1cc493db-d60e-415d-befd-8d46dd2450f6
+Taking next connection to: 57762
