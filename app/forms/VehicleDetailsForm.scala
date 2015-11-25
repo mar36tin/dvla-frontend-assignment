@@ -32,7 +32,7 @@ object VehicleDetailsForm {
   val vehicleDetailsForm: Form[VehicleDetails] = Form(mapping(
     "vehicleReg" -> text,
     "make" -> text,
-    "v5c" -> text
+    "v5c" -> optional(text)
   )(VehicleDetails.apply)(VehicleDetails.unapply)
     .verifying(vehicleRegEmptyConstraint)
     .verifying(makeEmptyConstraint)

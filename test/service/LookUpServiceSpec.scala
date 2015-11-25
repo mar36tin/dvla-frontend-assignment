@@ -13,7 +13,7 @@ class LookUpServiceSpec extends PlaySpec with OneServerPerSuite with ScalaFuture
       val regVehicle = TestLookUpService.lookUp("SF11THG").get
       regVehicle.vehicleReg must be ("SF11THG")
       regVehicle.make must be ("Nissan")
-      regVehicle.v5c must be ("123456789602")
+      regVehicle.v5c.get must be ("123456789602")
     }
   }
 

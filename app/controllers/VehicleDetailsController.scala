@@ -1,15 +1,12 @@
 package controllers
 
-import javax.inject._
 
-import play.api.i18n._
 import play.api.mvc._
 import service._
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.Future
 
-class VehicleDetailsController @Inject()( val messagesApi: MessagesApi)
-                                  (implicit ec: ExecutionContext) extends Controller with I18nSupport {
+class VehicleDetailsController extends Controller {
 
   val lookUpService = new LookUpService
 

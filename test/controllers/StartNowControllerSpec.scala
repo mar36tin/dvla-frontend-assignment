@@ -12,10 +12,9 @@ class StartNowControllerSpec extends PlaySpec with OneServerPerSuite with ScalaF
   object TestStartNowController extends StartNowController
 
   "startnow" should {
-    "load the start now page" in {
-      val result: Future[Result] = TestStartNowController.start(FakeRequest())
-      status(result) must be(OK)
-//      contentAsString(result) must include("StartNow")
-    }
+      "load the start now page" in {
+        val result: Future[Result] = TestStartNowController.start(FakeRequest())
+        status(result) must be(OK)
+      }
   }
 }
